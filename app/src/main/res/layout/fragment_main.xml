@@ -19,7 +19,8 @@
         android:layout_marginTop="8dp"
         android:numStars="5"
         android:rating="2.5"
-        android:background="@color/rating_bar_background"/>
+        android:background="@color/rating_bar_background"
+        android:theme="@style/RatingBar"/>
 
     <Button
         android:id="@+id/submint_button"

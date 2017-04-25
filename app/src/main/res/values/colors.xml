@@ -6,4 +6,6 @@
 
     <!-- Rating bar -->
     <color name="rating_bar_background">#00AFFF</color>
+    <color name="star_normal">#FFFF00</color>
+    <color name="star_change">#FF0000</color>
 </resources>
