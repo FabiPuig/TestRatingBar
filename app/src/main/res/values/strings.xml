@@ -3,4 +3,6 @@
     <string name="action_settings">Settings</string>
 
     <string name="submit_button">Añadir</string>
+    <string name="tv_average">Valoracion media</string>
+    <string name="tv_cant">Valoraciones</string>
 </resources>

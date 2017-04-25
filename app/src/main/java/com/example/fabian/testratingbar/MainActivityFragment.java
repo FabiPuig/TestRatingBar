@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RatingBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -16,6 +17,11 @@ public class MainActivityFragment extends Fragment {
 
     private Button btSubmit;
     private RatingBar ratingBar;
+    private RatingBar iRatingBar;
+    private TextView tvRating;
+    private TextView tvQuant;
+    private int contador = 0;
+    private float valTotal = 0;
 
     public MainActivityFragment() {
     }
@@ -27,6 +33,9 @@ public class MainActivityFragment extends Fragment {
 
         btSubmit = (Button) view.findViewById( R.id.submint_button );
         ratingBar = (RatingBar) view.findViewById( R.id.ratingBar );
+        iRatingBar = (RatingBar) view.findViewById( R.id.ratingBarIndicator );
+        tvRating = (TextView) view.findViewById( R.id.tv_rating );
+        tvQuant = (TextView) view.findViewById( R.id.tv_quant );
 
         ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
@@ -40,6 +49,13 @@ public class MainActivityFragment extends Fragment {
         btSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                valTotal += ratingBar.getRating();
+                contador++;
+                float res = valTotal / contador;
+                iRatingBar.setRating( res );
+                tvRating.setText( String.valueOf( res ) );
+                tvQuant.setText( String.valueOf( contador ) );
 
             }
         });
