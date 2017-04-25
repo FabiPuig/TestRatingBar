@@ -28,13 +28,18 @@ public class MainActivityFragment extends Fragment {
         btSubmit = (Button) view.findViewById( R.id.submint_button );
         ratingBar = (RatingBar) view.findViewById( R.id.ratingBar );
 
+        ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+
+                Toast.makeText( getContext(), String.valueOf( rating ), Toast.LENGTH_LONG).show();
+
+            }
+        });
+
         btSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                String rating = String.valueOf( ratingBar.getRating() );
-
-                Toast.makeText( getContext(), rating, Toast.LENGTH_LONG).show();
 
             }
         });
