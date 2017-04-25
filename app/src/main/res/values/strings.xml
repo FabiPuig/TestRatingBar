@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">TestRatingbar</string>
     <string name="action_settings">Settings</string>
+
+    <string name="submit_button">Añadir</string>
 </resources>
