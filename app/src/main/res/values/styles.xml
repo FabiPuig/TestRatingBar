@@ -22,4 +22,10 @@
         <item name="colorControlActivated">@color/star_change</item>
     </style>
 
+    <style name="CustomRatingBar" parent="Base.Widget.AppCompat.RatingBar">
+        <item name="android:progressDrawable">@drawable/custom_ratingbar_full</item>
+        <item name="android:minHeight">48dip</item>
+        <item name="android:maxHeight">48dip</item>
+    </style>
+
 </resources>

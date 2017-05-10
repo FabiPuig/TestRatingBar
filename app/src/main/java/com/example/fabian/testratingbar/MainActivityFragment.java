@@ -18,6 +18,7 @@ public class MainActivityFragment extends Fragment {
     private Button btSubmit;
     private RatingBar ratingBar;
     private RatingBar iRatingBar;
+    private RatingBar customRatingBar;
     private TextView tvRating;
     private TextView tvQuant;
     private int contador = 0;
@@ -34,6 +35,7 @@ public class MainActivityFragment extends Fragment {
         btSubmit = (Button) view.findViewById( R.id.submint_button );
         ratingBar = (RatingBar) view.findViewById( R.id.ratingBar );
         iRatingBar = (RatingBar) view.findViewById( R.id.ratingBarIndicator );
+        customRatingBar = (RatingBar) view.findViewById( R.id.rb_custom );
         tvRating = (TextView) view.findViewById( R.id.tv_rating );
         tvQuant = (TextView) view.findViewById( R.id.tv_quant );
 
@@ -54,7 +56,8 @@ public class MainActivityFragment extends Fragment {
                 contador++;
                 float res = valTotal / contador;
                 iRatingBar.setRating( res );
-                tvRating.setText( String.valueOf( res ) );
+                customRatingBar.setRating( res );
+                tvRating.setText( String.format("%.2f", res ) );
                 tvQuant.setText( String.valueOf( contador ) );
 
             }
