@@ -133,6 +133,7 @@
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
         style="?android:attr/ratingBarStyleSmall"
+        android:stepSize="0.5"
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/rb_custom" />
 
