@@ -28,4 +28,11 @@
         <item name="android:maxHeight">48dip</item>
     </style>
 
+    <style name="smallRatingBar" parent="Base.Widget.AppCompat.RatingBar.Small">
+        <item name="android:progressDrawable">@drawable/custom_ratingbar_small</item>
+        <!-- Normalmente es 16dip. Si el png es mas grande del indicado aqui lo recortara -->
+        <item name="android:minHeight">20dip</item>
+        <item name="android:maxHeight">20dip</item>
+    </style>
+
 </resources>
